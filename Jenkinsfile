@@ -1,12 +1,6 @@
 pipeline {
     agent any
-
-    stages {
-        stage('Clone') {
-            steps {
-                git 'https://github.com/Atelier88/Freedom.git'
-            }
-        }
+   
 
         stage('Build') {
             steps {
@@ -19,11 +13,5 @@ pipeline {
                 echo 'Running tests...'
             }
         }
-
-        stage('Run') {
-            steps {
-                echo 'Running application...'
-            }
         }
-    }
-}
+
